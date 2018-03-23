@@ -1,7 +1,10 @@
 #include "rtJsModules.h"
-#include "rtWrapperUtils.h"
+#include "rtWrapperUtilsDuk.h"
 #include "rtObject.h"
 #include "rtFileDownloader.h"
+
+namespace rtScriptDukUtils
+{
 
 static std::vector<rtRef<rtFunctionCallback> > gBindings;
 
@@ -274,4 +277,6 @@ rtError rtProxyTestObjectReturnBinding(int numArgs, const rtValue* args, rtValue
 
     return RT_OK;
 }
+
+} //namespace rtScriptDukUtils
 
